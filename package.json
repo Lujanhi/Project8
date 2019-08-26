@@ -1,0 +1,27 @@
+{
+  "name": "project8",
+  "version": "1.0.0",
+  "description": "Project8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lujanhi/Project8.git"
+  },
+  "author": "Alex Lujan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lujanhi/Project8/issues"
+  },
+  "homepage": "https://github.com/Lujanhi/Project8#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "pug": "^2.0.4",
+    "sequelize": "^5.16.0",
+    "sequelize-cli": "^5.5.0",
+    "sqlite3": "^4.1.0"
+  }
+}
