@@ -3,7 +3,6 @@ const Config = require('../config/config')
 
 
 //use as a fill in the blank templet, it includes a title, author ,genre and year
-// when the info is fetch the computer will use this templet to input the info gather.
 
 
 const Books = Config.define('book', {
