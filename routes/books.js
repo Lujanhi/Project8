@@ -12,7 +12,8 @@ router.get('/', (req, res) => {
 });
 
 
-////route that renders webpage to create/add a new book to the database, the get request creates a new blank shell of information that is necessary in order for the the database to accept the new entry. 
+////route that renders webpage to create/add a new book to the database, 
+//the get request creates a new blank shell of information that is necessary in order for the the database to accept the new entry. 
 router.get('/new', (req, res) => res.render('new-book'));
 
 //posts the new database entry to the webpage and updates the data-base with the new entry. 
