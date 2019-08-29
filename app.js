@@ -16,17 +16,24 @@ app.get('/', (req, res) => res.redirect('/books'));
 
 app.use('/books', require('./routes/books'));
 
-app.use((req, res, next) => {
-    res.locals.error = err;
-    console.log('Error status:', err.status);
-    res.status(err.status || 500);
-    if (err.status === 404) {
-        res.render('page-not-found')
-    } else {
-        res.render('error')
-    }
+
+// ERROR PAGE
+app.use((request, response, next) => {
+    const err = new Error("error");
+    err.status = 404;
+    next(err)
+    response.render('error')
+    console.log(err);
 });
 
+app.use((err, request, response, next) => {
+    response.locals.error = err
+    response.status(err.status)
+});
+
+
+//  ALLOWS YOU TO SYNCHRONIZE THE CONFIGUARATION BETWEEN A PAIR OF SWITCHES IN A NETWORK 
+// GOES TO THE CONFIG.JS FILE AND LISTEN TO PORT 3000
 Config.sync()
     .then(() => {
         app.listen(process.env.PORT || 3000, () => console.log('Application running on localhost:3000'))
